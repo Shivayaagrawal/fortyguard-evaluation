@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-18T12:50:15.351Z",
+  "status": 401,
+  "request": {
+    "method": "GET",
+    "path": "/v1/status/does-not-exist",
+    "authorization": "invalid-key"
+  },
+  "response": {
+    "error": true,
+    "status_code": 401,
+    "details": {
+      "message": "Invalid or unknown API key."
+    }
+  }
+}

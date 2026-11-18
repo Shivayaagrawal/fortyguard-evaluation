@@ -1,0 +1,11 @@
+{
+  "corrects": "evidence/mcp/configuration/2026-11-18-initialize-diagnostic.json",
+  "originalFileUnchanged": true,
+  "exchangeIndex": 1,
+  "httpStatus": 503,
+  "originalClassification": "jsonrpc_error",
+  "correctedClassification": "http_error",
+  "reason": "HTTP 503 response with a non-JSON-RPC error body. The body has no jsonrpc field, and error is a string.",
+  "classifier": "src/mcp/http-classification.ts — classifyHttpResponse",
+  "tests": "tests/mcp/http-classification.test.ts — classifies the FortyGuard authentication-service 503 as an HTTP error"
+}

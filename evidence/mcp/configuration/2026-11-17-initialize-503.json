@@ -1,0 +1,71 @@
+{
+  "at": "2026-11-17T21:39:20.799Z",
+  "endpoint": "https://tos-mcp.app.fortyguard.com/mcp",
+  "sdk": "@modelcontextprotocol/sdk 1.32.2",
+  "transport": "StreamableHTTPClientTransport",
+  "auth": "Authorization Bearer, value not recorded",
+  "toolsCalled": [],
+  "connectTimeoutMs": 35000,
+  "elapsedMs": 11956,
+  "outcome": "failed",
+  "serverVersion": null,
+  "sdkError": {
+    "name": "Error",
+    "message": "Streamable HTTP error: Error POSTing to endpoint: {\"error\":\"temporarily_unavailable\",\"retriable\":true,\"message\":\"Authentication service is temporarily unavailable.\"}",
+    "code": 503
+  },
+  "exchanges": [
+    {
+      "method": "POST",
+      "url": "https://tos-mcp.app.fortyguard.com/mcp",
+      "durationMs": 11536,
+      "status": 200,
+      "statusText": "",
+      "redirected": false,
+      "responseUrl": "https://tos-mcp.app.fortyguard.com/mcp",
+      "request": {
+        "authorization": "bearer-once",
+        "contentType": "application/json",
+        "accept": "application/json, text/event-stream"
+      },
+      "headers": {
+        "cache-control": "no-cache, no-transform",
+        "content-type": "text/event-stream",
+        "date": "Tue, 17 Nov 2026 21:36:19 GMT",
+        "server": "envoy",
+        "x-accel-buffering": "no",
+        "x-envoy-upstream-service-time": "10364"
+      },
+      "body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":0,\"result\":{\"protocolVersion\":\"2025-11-25\",\"capabilities\":{\"logging\":{},\"prompts\":{\"listChanged\":true},\"resources\":{\"subscribe\":false,\"listChanged\":true},\"tools\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"FortyGuard\",\"version\":\"4.0.11\"}}}\r\n\r\n",
+      "bodyTruncated": false,
+      "classification": "http_success"
+    },
+    {
+      "method": "POST",
+      "url": "https://tos-mcp.app.fortyguard.com/mcp",
+      "durationMs": 339,
+      "status": 503,
+      "statusText": "",
+      "redirected": false,
+      "responseUrl": "https://tos-mcp.app.fortyguard.com/mcp",
+      "request": {
+        "authorization": "bearer-once",
+        "contentType": "application/json",
+        "accept": "application/json, text/event-stream"
+      },
+      "headers": {
+        "cache-control": "no-store",
+        "content-encoding": "gzip",
+        "content-type": "application/json",
+        "date": "Tue, 17 Nov 2026 21:39:20 GMT",
+        "retry-after": "5",
+        "server": "envoy",
+        "vary": "Accept-Encoding",
+        "x-envoy-upstream-service-time": "41"
+      },
+      "body": "{\"error\":\"temporarily_unavailable\",\"retriable\":true,\"message\":\"Authentication service is temporarily unavailable.\"}",
+      "bodyTruncated": false,
+      "classification": "jsonrpc_error"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "API-002",
+  "at": "2026-11-18T14:52:47.632Z",
+  "elapsedMs": 373,
+  "request": {
+    "method": "GET",
+    "path": "/v1/status/00000000-0000-4000-8000-000000000001",
+    "authorization": "invalid-dummy-key",
+    "accept": "application/json"
+  },
+  "response": {
+    "status": 401,
+    "contentType": "application/json",
+    "bytes": 84,
+    "body": {
+      "error": true,
+      "status_code": 401,
+      "details": {
+        "message": "Invalid or unknown API key."
+      }
+    }
+  }
+}

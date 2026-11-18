@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-18T11:32:16.299Z",
+  "elapsedMs": 2020,
+  "status": 200,
+  "request": {
+    "method": "POST",
+    "path": "/v1/env_params",
+    "body": {
+      "latitude": 33.4484,
+      "longitude": -112.074,
+      "temperature": 35,
+      "date_time": {
+        "start_date": "2025-09-20",
+        "start_time": "14:00",
+        "filter_type": 1
+      }
+    },
+    "authorization": "present"
+  },
+  "response": {
+    "error": false,
+    "status_code": 200,
+    "message": "Environment Parameters Analysis Submitted Successfully",
+    "data": {
+      "activity_id": "98a664cb-d9bb-484c-82a1-3d23ed9c7365"
+    }
+  }
+}

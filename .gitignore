@@ -1,0 +1,13 @@
+# API secrets / credentials only
+.env
+.env.local
+.env.*.local
+**/credentials.json
+**/secrets.json
+*.pem
+
+# dependency install tree (not source)
+node_modules/
+
+# OS
+.DS_Store

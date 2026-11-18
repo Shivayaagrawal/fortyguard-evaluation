@@ -1,0 +1,23 @@
+{
+  "id": "API-001",
+  "at": "2026-11-18T14:52:47.254Z",
+  "elapsedMs": 1223,
+  "request": {
+    "method": "GET",
+    "path": "/v1/status/00000000-0000-4000-8000-000000000001",
+    "authorization": "absent",
+    "accept": "application/json"
+  },
+  "response": {
+    "status": 401,
+    "contentType": "application/json",
+    "bytes": 138,
+    "body": {
+      "error": true,
+      "status_code": 401,
+      "details": {
+        "message": "Missing required 'api-key' header. Send your key in the 'api-key' request header."
+      }
+    }
+  }
+}

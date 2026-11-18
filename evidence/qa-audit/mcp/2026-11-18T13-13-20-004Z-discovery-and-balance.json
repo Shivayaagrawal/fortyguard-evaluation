@@ -1,0 +1,268 @@
+{
+  "at": "2026-11-18T13:13:26.448Z",
+  "elapsedMs": 6454,
+  "endpoint": "https://tos-mcp.app.fortyguard.com/mcp",
+  "auth": "Authorization Bearer from the local environment",
+  "serverVersion": {
+    "name": "FortyGuard",
+    "version": "4.0.11"
+  },
+  "toolCount": 11,
+  "names": [
+    "credit_balance",
+    "env_params",
+    "heatmap",
+    "heatmap_read",
+    "monitoring",
+    "report",
+    "report_read",
+    "satellite",
+    "streetview",
+    "temperature_routing",
+    "temperature_routing_read"
+  ],
+  "invoked": [
+    "credit_balance"
+  ],
+  "notInvoked": [
+    "env_params",
+    "heatmap",
+    "heatmap_read",
+    "monitoring",
+    "report",
+    "report_read",
+    "satellite",
+    "streetview",
+    "temperature_routing",
+    "temperature_routing_read"
+  ],
+  "creditBalance": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ok\":true,\"result\":{\"tool\":\"credit_balance\",\"value\":{\"available_credits\":997100},\"evidence\":[],\"warnings\":[]},\"trace\":{\"trace_id\":\"bc97f179e4b6\",\"tool\":\"credit_balance\",\"plan_type\":\"premium\",\"decision\":\"allow\",\"status\":\"ok\",\"latency_ms\":515,\"cost_credits\":0}}"
+      }
+    ],
+    "structuredContent": {
+      "available_credits": 997100
+    },
+    "isError": false
+  },
+  "schemaDigest": [
+    {
+      "name": "credit_balance",
+      "required": [],
+      "propertyNames": [],
+      "additionalProperties": false,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": true,
+      "paidPhrase": null
+    },
+    {
+      "name": "env_params",
+      "required": [
+        "latitude",
+        "longitude",
+        "temperature",
+        "date_time"
+      ],
+      "propertyNames": [
+        "heatmap_id",
+        "latitude",
+        "longitude",
+        "temperature",
+        "date_time",
+        "analysis"
+      ],
+      "additionalProperties": null,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": true,
+      "descriptionSaysFree": false,
+      "paidPhrase": "Paid: 2,110 credits on basic/startup, 2,900 on premium/hackathon"
+    },
+    {
+      "name": "heatmap",
+      "required": [
+        "polygon_aoi",
+        "date_time"
+      ],
+      "propertyNames": [
+        "polygon_aoi",
+        "date_time",
+        "granularity",
+        "analytic_type",
+        "threshold",
+        "direction",
+        "idempotency_key",
+        "map_type",
+        "notify_by_email"
+      ],
+      "additionalProperties": false,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": true,
+      "descriptionSaysFree": true,
+      "paidPhrase": "Paid: 3,500 credits on free/basic/startup, 4,220 on premium/hackathon"
+    },
+    {
+      "name": "heatmap_read",
+      "required": [],
+      "propertyNames": [
+        "activity_id",
+        "heatmap_id"
+      ],
+      "additionalProperties": null,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": false,
+      "paidPhrase": null
+    },
+    {
+      "name": "monitoring",
+      "required": [
+        "operation"
+      ],
+      "propertyNames": [
+        "operation",
+        "monitor_id",
+        "alert_id",
+        "run_id",
+        "heatmap_id",
+        "name",
+        "boundary_geojson",
+        "rules",
+        "notifications",
+        "enabled",
+        "generate_report",
+        "file_type",
+        "cursor",
+        "limit",
+        "status"
+      ],
+      "additionalProperties": false,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": true,
+      "paidPhrase": null
+    },
+    {
+      "name": "report",
+      "required": [
+        "latitude",
+        "longitude",
+        "temperature",
+        "date",
+        "analysis"
+      ],
+      "propertyNames": [
+        "heatmap_id",
+        "polygon",
+        "report_polygon",
+        "selected_heat_intelligence_tile_id",
+        "date_time",
+        "granularity",
+        "notify_by_email",
+        "latitude",
+        "longitude",
+        "temperature",
+        "date",
+        "analysis"
+      ],
+      "additionalProperties": null,
+      "descriptionHasFahrenheit": true,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": true,
+      "paidPhrase": "Paid: 6,300 credits on free, 8,600 on premium"
+    },
+    {
+      "name": "report_read",
+      "required": [
+        "analytics_id"
+      ],
+      "propertyNames": [
+        "heatmap_id",
+        "analytics_id"
+      ],
+      "additionalProperties": false,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": false,
+      "paidPhrase": null
+    },
+    {
+      "name": "satellite",
+      "required": [
+        "date_time"
+      ],
+      "propertyNames": [
+        "heatmap_id",
+        "tiles",
+        "big_area",
+        "sat",
+        "date_time",
+        "granularity"
+      ],
+      "additionalProperties": null,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": false,
+      "paidPhrase": "Paid: 14,400 credits on premium"
+    },
+    {
+      "name": "streetview",
+      "required": [
+        "latitude",
+        "longitude",
+        "vertical_angle",
+        "horizontal_angle",
+        "back_view"
+      ],
+      "propertyNames": [
+        "heatmap_id",
+        "date_time",
+        "latitude",
+        "longitude",
+        "vertical_angle",
+        "horizontal_angle",
+        "back_view"
+      ],
+      "additionalProperties": null,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": false,
+      "paidPhrase": "Paid: 8,600 credits on premium/hackathon"
+    },
+    {
+      "name": "temperature_routing",
+      "required": [
+        "origin",
+        "destination",
+        "departure_time"
+      ],
+      "propertyNames": [
+        "origin",
+        "destination",
+        "departure_time"
+      ],
+      "additionalProperties": false,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": false,
+      "paidPhrase": "Paid: 3,500 credits on all entitled plans"
+    },
+    {
+      "name": "temperature_routing_read",
+      "required": [
+        "activity_id"
+      ],
+      "propertyNames": [
+        "activity_id"
+      ],
+      "additionalProperties": false,
+      "descriptionHasFahrenheit": false,
+      "descriptionHasCelsius": false,
+      "descriptionSaysFree": false,
+      "paidPhrase": null
+    }
+  ]
+}

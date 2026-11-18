@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "railway": {
+      "args": ["mcp"],
+      "command": "railway"
+    },
+    "fortyguard": {
+      "url": "https://tos-mcp.app.fortyguard.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:FORTYGUARD_API_KEY}"
+      }
+    }
+  }
+}

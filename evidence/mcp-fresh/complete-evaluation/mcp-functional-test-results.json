@@ -1,0 +1,336 @@
+{
+  "phase": "complete-functional-evaluation",
+  "started_local": "2026-11-18T22:55:50+0530",
+  "ended_local": "2026-11-18T22:58:30+0530",
+  "started_utc": "2026-11-18T17:25:50Z",
+  "ended_utc": "2026-11-18T17:28:30Z",
+  "invocation_source": "cursor_mcp_integration",
+  "namespace": "user-fortyguard",
+  "connectivity": {
+    "namespace_status": "ready",
+    "auth": "Bearer via FORTYGUARD_API_KEY in Cursor process environment",
+    "transport": "Streamable HTTP",
+    "endpoint": "https://tos-mcp.app.fortyguard.com/mcp",
+    "initial_401_resolved": true,
+    "protocol_version_exposed_in_cursor_listing": null,
+    "sdk_protocol_version_historical": "2025-11-25",
+    "server_version_historical_sdk": "FortyGuard 4.0.11"
+  },
+  "reuse": {
+    "phase_c_credit_balance": {
+      "phase": "C",
+      "timestamp_local": "2026-11-18T22:50:15+0530",
+      "timestamp_utc": "2026-11-18T17:20:15Z",
+      "namespace": "user-fortyguard",
+      "tool": "credit_balance",
+      "invocation_source": "cursor_mcp_integration",
+      "succeeded": true,
+      "error": null,
+      "account_plan": "premium",
+      "available_credits": 994200,
+      "cost_credits": 0,
+      "trace_id": "f0854581c856",
+      "latency_ms": 1095,
+      "decision": "allow",
+      "status": "ok",
+      "notes": [
+        "Single live MCP invocation only",
+        "No SDK/HTTP/script substitute",
+        "Credentials redacted; mcp.json unchanged"
+      ]
+    },
+    "phase_d_discovery_path": "evidence/mcp-fresh/cursor-integration/2026-11-18-phase-d-tool-discovery.json"
+  },
+  "executions": [
+    {
+      "tool": "credit_balance",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Phase C free read-only baseline (reused; not re-invoked)",
+      "input": {},
+      "result": {
+        "available_credits": 994200,
+        "plan_type": "premium",
+        "cost_credits": 0
+      },
+      "status": "success",
+      "latency_ms": 1095,
+      "cost": {
+        "actual": 0,
+        "documented": "free"
+      },
+      "trace_id": "f0854581c856",
+      "finding": "Cursor MCP can execute a free tool successfully after env-correct relaunch."
+    },
+    {
+      "tool": "monitoring",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Confirm free list_monitors operation",
+      "input": {
+        "operation": "list_monitors"
+      },
+      "result": {
+        "ok": true,
+        "value": {
+          "operation": "list_monitors",
+          "status": "completed",
+          "monitors": [],
+          "has_more": false
+        }
+      },
+      "status": "success",
+      "latency_ms": 1668,
+      "cost": {
+        "actual": 0,
+        "documented": "free"
+      },
+      "trace_id": "f60562e03d46",
+      "finding": "Free monitoring list works; empty monitor set returned; cost_credits 0."
+    },
+    {
+      "tool": "monitoring",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Confirm free list_alerts claim",
+      "input": {
+        "operation": "list_alerts"
+      },
+      "result": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "The request input is invalid.",
+          "retriable": false
+        }
+      },
+      "status": "failure",
+      "latency_ms": 0,
+      "cost": {
+        "actual": null,
+        "documented": "free",
+        "note": "No cost_credits field; latency 0; appears uncharged"
+      },
+      "trace_id": "f31125965e3c",
+      "finding": "list_alerts described as free but rejected as invalid_input with only required operation set."
+    },
+    {
+      "tool": "monitoring",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Retry list_alerts with limit",
+      "input": {
+        "operation": "list_alerts",
+        "limit": 10
+      },
+      "result": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "The request input is invalid.",
+          "retriable": false
+        }
+      },
+      "status": "failure",
+      "latency_ms": 0,
+      "cost": {
+        "actual": null,
+        "documented": "free"
+      },
+      "trace_id": "26fea41f029c",
+      "finding": "Optional limit did not resolve list_alerts invalid_input."
+    },
+    {
+      "tool": "heatmap_read",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Error handling for invalid activity_id",
+      "input": {
+        "activity_id": "invalid-eval-heatmap-id-0001"
+      },
+      "result": {
+        "ok": false,
+        "error": {
+          "category": "denied",
+          "code": "ACTIVITY_UNAVAILABLE",
+          "message": "Activity not found or unavailable to this account. Check the activity ID and try again."
+        }
+      },
+      "status": "failure_expected",
+      "latency_ms": 1000,
+      "cost": {
+        "actual": null,
+        "documented": "read; no paid language"
+      },
+      "trace_id": "32dba26040eb",
+      "finding": "Clear server-side denial for unknown heatmap activity."
+    },
+    {
+      "tool": "report_read",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Error handling for invalid analytics_id",
+      "input": {
+        "analytics_id": "invalid-eval-report-id-0001"
+      },
+      "result": {
+        "ok": false,
+        "error": {
+          "category": "denied",
+          "code": "ACTIVITY_UNAVAILABLE",
+          "message": "Activity not found or unavailable to this account. Check the activity ID and try again."
+        }
+      },
+      "status": "failure_expected",
+      "latency_ms": 1782,
+      "cost": {
+        "actual": null,
+        "documented": "read"
+      },
+      "trace_id": "1122fa0dba22",
+      "finding": "Clear denial for unknown report analytics_id."
+    },
+    {
+      "tool": "report_read",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Runtime probe of documented activity_id alias",
+      "input": {
+        "activity_id": "invalid-eval-report-id-0001"
+      },
+      "result": {
+        "ok": false,
+        "error": {
+          "category": "denied",
+          "code": "ACTIVITY_UNAVAILABLE",
+          "message": "Activity not found or unavailable to this account. Check the activity ID and try again."
+        }
+      },
+      "status": "failure_expected",
+      "latency_ms": 590,
+      "cost": {
+        "actual": null,
+        "documented": "read"
+      },
+      "trace_id": "f45557797baa",
+      "finding": "activity_id reached server and returned ACTIVITY_UNAVAILABLE (same as analytics_id). Alias appears accepted at runtime despite not being a schema property and additionalProperties=false."
+    },
+    {
+      "tool": "temperature_routing_read",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Error handling for invalid activity_id",
+      "input": {
+        "activity_id": "invalid-eval-route-id-0001"
+      },
+      "result": {
+        "ok": false,
+        "error": {
+          "category": "denied",
+          "code": "ACTIVITY_UNAVAILABLE",
+          "message": "Activity not found or unavailable to this account. Check the activity ID and try again."
+        }
+      },
+      "status": "failure_expected",
+      "latency_ms": 854,
+      "cost": {
+        "actual": null,
+        "documented": "read"
+      },
+      "trace_id": "6509fec48549",
+      "finding": "Clear denial for unknown routing activity."
+    },
+    {
+      "tool": "heatmap_read",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Missing required identifier validation",
+      "input": {},
+      "result": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "code": "INVALID_ACTIVITY_ID",
+          "field": "activity_id",
+          "message": "activity_id must be a non-empty identifier without whitespace."
+        }
+      },
+      "status": "failure_expected",
+      "latency_ms": 0,
+      "cost": {
+        "actual": null,
+        "documented": "read"
+      },
+      "trace_id": "375cc5dcc562",
+      "finding": "Server validates missing activity_id with field-specific invalid_input even though schema marks neither id required."
+    },
+    {
+      "tool": "monitoring",
+      "invocation_source": "Cursor MCP",
+      "purpose": "Missing required operation validation",
+      "input": {},
+      "result": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "field": "operation",
+          "message": "The request input is invalid."
+        }
+      },
+      "status": "failure_expected",
+      "latency_ms": 0,
+      "cost": {
+        "actual": null,
+        "documented": "n/a"
+      },
+      "trace_id": "621f5af382a4",
+      "finding": "Missing operation rejected with invalid_input and field=operation."
+    }
+  ],
+  "summary": {
+    "tools_executed_unique": [
+      "credit_balance",
+      "monitoring",
+      "heatmap_read",
+      "report_read",
+      "temperature_routing_read"
+    ],
+    "successful_ops": [
+      "credit_balance",
+      "monitoring.list_monitors"
+    ],
+    "failed_ops_unexpected": [
+      "monitoring.list_alerts",
+      "monitoring.list_alerts+limit"
+    ],
+    "failed_ops_expected_validation_or_not_found": [
+      "heatmap_read.invalid_id",
+      "report_read.invalid_analytics_id",
+      "report_read.activity_id_alias",
+      "temperature_routing_read.invalid_id",
+      "heatmap_read.empty",
+      "monitoring.missing_operation"
+    ],
+    "paid_ops_executed": [],
+    "destructive_ops_executed": [],
+    "credits_spent_this_session": 0
+  },
+  "paid_approval_requests": [
+    {
+      "tool": "env_params",
+      "purpose": "Resolve DIRECT vs activity-id behaviour and exercise a representative analysis tool for form completeness",
+      "required_input": {
+        "latitude": 33.4484,
+        "longitude": -112.074,
+        "temperature": 35,
+        "date_time": {
+          "start_date": "2025-09-20",
+          "filter_type": 3
+        }
+      },
+      "expected_credit_cost": 2900,
+      "current_balance_phase_c": 994200,
+      "why_necessary": "Only unpaid way left to verify env_params return shape vs docs DIRECT label; highest-value unpaid discrepancy.",
+      "status": "awaiting_explicit_approval"
+    },
+    {
+      "tool": "heatmap / report / satellite / streetview / temperature_routing / paid monitoring",
+      "purpose": "Broader paid capability coverage",
+      "expected_credit_cost": "3500\u201314400 depending on tool",
+      "current_balance_phase_c": 994200,
+      "why_necessary": "Would strengthen rating of paid analysis path; not required to draft form answers if env_params remains gated.",
+      "status": "awaiting_explicit_approval"
+    }
+  ]
+}

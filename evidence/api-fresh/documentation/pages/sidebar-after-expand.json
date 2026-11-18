@@ -1,0 +1,122 @@
+[
+  {
+    "text": "Introduction",
+    "href": "/docs/introduction"
+  },
+  {
+    "text": "Quickstart",
+    "href": "/docs/quickstart"
+  },
+  {
+    "text": "Authentication",
+    "href": "/docs/authentication"
+  },
+  {
+    "text": "MCP Overview",
+    "href": "/docs/mcp-overview"
+  },
+  {
+    "text": "MCP Quickstart",
+    "href": "/docs/mcp-quickstart"
+  },
+  {
+    "text": "MCP Authentication",
+    "href": "/docs/mcp-authentication"
+  },
+  {
+    "text": "Available Tools",
+    "href": "/docs/mcp-tools"
+  },
+  {
+    "text": "Client Setup",
+    "href": "/docs/mcp-client-setup"
+  },
+  {
+    "text": "Troubleshooting",
+    "href": "/docs/mcp-troubleshooting"
+  },
+  {
+    "text": "QGIS",
+    "href": "/docs/qgis-integration"
+  },
+  {
+    "text": "Create Heatmap POST",
+    "href": "/docs/create-heatmap"
+  },
+  {
+    "text": "Satellite View Segmentation POST",
+    "href": "/docs/satellite-view-segmentation"
+  },
+  {
+    "text": "Street View Segmentation POST",
+    "href": "/docs/street-view-segmentation"
+  },
+  {
+    "text": "Heat Intelligence POST",
+    "href": "/docs/heat-intelligence"
+  },
+  {
+    "text": "Environmental Parameters POST",
+    "href": "/docs/environmental-parameters"
+  },
+  {
+    "text": "Temperature-Aware Routing POST",
+    "href": "/docs/routing"
+  },
+  {
+    "text": "Create Monitor POST",
+    "href": "/docs/monitoring-create"
+  },
+  {
+    "text": "List Monitors GET",
+    "href": "/docs/monitoring-list"
+  },
+  {
+    "text": "Get Monitor GET",
+    "href": "/docs/monitoring-get"
+  },
+  {
+    "text": "Update Monitor PATCH",
+    "href": "/docs/monitoring-update"
+  },
+  {
+    "text": "Delete Monitor DELETE",
+    "href": "/docs/monitoring-delete"
+  },
+  {
+    "text": "List Alerts GET",
+    "href": "/docs/monitoring-alerts"
+  },
+  {
+    "text": "Alert Report GET",
+    "href": "/docs/monitoring-report"
+  },
+  {
+    "text": "Check Status GET",
+    "href": "/docs/check-status"
+  },
+  {
+    "text": "Check API Credits Usage GET",
+    "href": "/docs/credits-usage"
+  },
+  {
+    "text": "Get a Free API Key POST",
+    "href": "/docs/generate-free-key"
+  },
+  {
+    "text": "Known Limitations",
+    "href": "/docs/limitations"
+  },
+  {
+    "text": "Release Notes",
+    "href": "/docs/release-notes"
+  },
+  {
+    "text": "View Plans & Pricing",
+    "href": "https://fortyguard.com/api-pricing"
+  },
+  {
+    "text": "NEXT Quickstart",
+    "href": "/docs/quickstart"
+  }
+]

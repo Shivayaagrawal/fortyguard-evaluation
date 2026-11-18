@@ -1,0 +1,23 @@
+{
+  "executed": false,
+  "reason": "Waiting for review. A completed Premium call is documented at 2900 credits. Basic and Startup are documented at 2110. This pass did not confirm the live plan or balance.",
+  "method": "POST",
+  "path": "/v1/env_params",
+  "headers": {
+    "api-key": "[redacted]",
+    "content-type": "application/json",
+    "accept": "application/json"
+  },
+  "body": {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "temperature": 32.5,
+    "date_time": {
+      "start_date": "2024-07-15",
+      "start_time": "14:00",
+      "filter_type": 1
+    }
+  },
+  "source": "Example on https://docs-api.fortyguard.com/docs/environmental-parameters, captured 2026-11-18.",
+  "temperature_unit_in_docs": "Celsius"
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "route": "/docs/monitoring-create",
+    "status": 200,
+    "h1": "Create Monitor",
+    "chars": 2839,
+    "ms": 34515,
+    "file": "monitoring-create.md"
+  },
+  {
+    "route": "/docs/monitoring-list",
+    "status": 200,
+    "h1": "List Monitors",
+    "chars": 1385,
+    "ms": 31923,
+    "file": "monitoring-list.md"
+  },
+  {
+    "route": "/docs/monitoring-get",
+    "status": 200,
+    "h1": "Get Monitor",
+    "chars": 1120,
+    "ms": 31865,
+    "file": "monitoring-get.md"
+  },
+  {
+    "route": "/docs/monitoring-update",
+    "status": 200,
+    "h1": "Update Monitor",
+    "chars": 1799,
+    "ms": 31845,
+    "file": "monitoring-update.md"
+  },
+  {
+    "route": "/docs/monitoring-delete",
+    "status": 200,
+    "h1": "Delete Monitor",
+    "chars": 1127,
+    "ms": 31862,
+    "file": "monitoring-delete.md"
+  },
+  {
+    "route": "/docs/monitoring-alerts",
+    "status": 200,
+    "h1": "List Alerts",
+    "chars": 1589,
+    "ms": 31866,
+    "file": "monitoring-alerts.md"
+  },
+  {
+    "route": "/docs/monitoring-report",
+    "status": 200,
+    "h1": "Alert Report",
+    "chars": 1879,
+    "ms": 31858,
+    "file": "monitoring-report.md"
+  }
+]

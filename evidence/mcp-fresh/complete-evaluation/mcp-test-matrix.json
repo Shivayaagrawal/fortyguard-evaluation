@@ -1,0 +1,128 @@
+{
+  "timestamp_local": "2026-11-18T22:55:50+0530",
+  "timestamp_utc": "2026-11-18T17:25:50Z",
+  "mcp_namespace": "user-fortyguard",
+  "form_source": "docs/12-final-feedback-form-draft.md / docs/27-final-feedback-question-coverage.md / docs/51-mcp-google-form-answers.md / PRODUCT_EVALUATION_TRACKER",
+  "questions": [
+    {
+      "form_question": "Did you try the MCP? How did you set it up and which client did you use? (Form Q15 / tracker Q10\u201311)",
+      "evidence_required": "Client name, config method, auth method, connection outcome",
+      "test_required": "Cursor MCP setup + connectivity verification; reuse Phase B/C",
+      "status": "complete"
+    },
+    {
+      "form_question": "How would you rate the MCP experience (1\u201310)? (Form Q16 / tracker Q12)",
+      "evidence_required": "Justified 1\u201310 based on setup, reliability, functionality, docs, DX",
+      "test_required": "Functional free tests + discovery + UX assessment; paid gated",
+      "status": "complete"
+    },
+    {
+      "form_question": "Did you face any issues during setup or usage? (Form Q17 / tracker Q13)",
+      "evidence_required": "Setup errors, auth failures, schema/doc mismatches, runtime issues",
+      "test_required": "Record initial 401 recovery; free functional/error tests; doc comparison",
+      "status": "complete"
+    },
+    {
+      "form_question": "What improvements would you suggest for the MCP? (docs/51 + related form improvement prompts)",
+      "evidence_required": "Evidence-backed prioritized recommendations",
+      "test_required": "Docs vs live schema comparison + observed DX issues",
+      "status": "complete"
+    },
+    {
+      "form_question": "Whether connection and authentication worked",
+      "evidence_required": "Namespace ready; Phase C success; env key present",
+      "test_required": "Connectivity check; reuse Phase C credit_balance",
+      "status": "complete"
+    },
+    {
+      "form_question": "Whether MCP tools were discoverable",
+      "evidence_required": "Live catalogue count and names",
+      "test_required": "Reuse/confirm Phase D discovery",
+      "status": "complete"
+    },
+    {
+      "form_question": "Whether tools could actually execute",
+      "evidence_required": "At least one successful Cursor MCP invocation; additional free ops if available",
+      "test_required": "Phase C credit_balance + free monitoring list ops + safe error probes",
+      "status": "complete"
+    },
+    {
+      "form_question": "Whether functionality matched documentation",
+      "evidence_required": "Confirmed discrepancies list",
+      "test_required": "Phase D comparison + any runtime confirmation from free tests",
+      "status": "complete"
+    },
+    {
+      "form_question": "Overall MCP experience / additional comments if requested",
+      "evidence_required": "Concise technical assessment",
+      "test_required": "Synthesize after free tests; note untested paid scope",
+      "status": "complete"
+    }
+  ],
+  "planned_safe_executions": [
+    {
+      "tool": "monitoring",
+      "operation": "list_monitors",
+      "reason": "Live description says free",
+      "cost_expected": 0
+    },
+    {
+      "tool": "monitoring",
+      "operation": "list_alerts",
+      "reason": "Live description says free",
+      "cost_expected": 0
+    },
+    {
+      "tool": "heatmap_read",
+      "operation": null,
+      "reason": "Read with invalid id for error handling; described as non-creating read",
+      "cost_expected": "expected 0 / unknown if charged"
+    },
+    {
+      "tool": "report_read",
+      "operation": null,
+      "reason": "Read with invalid analytics_id; also probe activity_id alias claim",
+      "cost_expected": "expected 0 / unknown if charged"
+    },
+    {
+      "tool": "temperature_routing_read",
+      "operation": null,
+      "reason": "Read with invalid activity_id for error handling",
+      "cost_expected": "expected 0 / unknown if charged"
+    }
+  ],
+  "paid_approval_gate": "No paid analysis tools will be executed until explicit approval",
+  "reuse": {
+    "phase_c": "evidence/mcp-fresh/cursor-integration/2026-11-18-phase-c-credit-balance.json",
+    "phase_d": "evidence/mcp-fresh/cursor-integration/2026-11-18-phase-d-tool-discovery.json"
+  },
+  "completed_local": "2026-11-18T22:58:30+0530",
+  "execution_summary": {
+    "tools_executed_unique": [
+      "credit_balance",
+      "monitoring",
+      "heatmap_read",
+      "report_read",
+      "temperature_routing_read"
+    ],
+    "successful_ops": [
+      "credit_balance",
+      "monitoring.list_monitors"
+    ],
+    "failed_ops_unexpected": [
+      "monitoring.list_alerts",
+      "monitoring.list_alerts+limit"
+    ],
+    "failed_ops_expected_validation_or_not_found": [
+      "heatmap_read.invalid_id",
+      "report_read.invalid_analytics_id",
+      "report_read.activity_id_alias",
+      "temperature_routing_read.invalid_id",
+      "heatmap_read.empty",
+      "monitoring.missing_operation"
+    ],
+    "paid_ops_executed": [],
+    "destructive_ops_executed": [],
+    "credits_spent_this_session": 0
+  }
+}

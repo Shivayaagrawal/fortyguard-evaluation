@@ -1,0 +1,22 @@
+{
+  "phase": "C",
+  "timestamp_local": "2026-11-18T22:50:15+0530",
+  "timestamp_utc": "2026-11-18T17:20:15Z",
+  "namespace": "user-fortyguard",
+  "tool": "credit_balance",
+  "invocation_source": "cursor_mcp_integration",
+  "succeeded": true,
+  "error": null,
+  "account_plan": "premium",
+  "available_credits": 994200,
+  "cost_credits": 0,
+  "trace_id": "f0854581c856",
+  "latency_ms": 1095,
+  "decision": "allow",
+  "status": "ok",
+  "notes": [
+    "Single live MCP invocation only",
+    "No SDK/HTTP/script substitute",
+    "Credentials redacted; mcp.json unchanged"
+  ]
+}

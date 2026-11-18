@@ -1,0 +1,96 @@
+{
+  "hits": [],
+  "forms": [],
+  "inputs": [
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "name": null,
+      "placeholder": "Search documentation"
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "name": null,
+      "placeholder": "Enter your API key"
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "tag": "BUTTON",
+      "type": null,
+      "name": null,
+      "placeholder": null
+    }
+  ]
+}

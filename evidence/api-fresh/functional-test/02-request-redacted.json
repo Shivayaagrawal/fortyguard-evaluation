@@ -1,0 +1,21 @@
+{
+  "method": "POST",
+  "path": "/v1/env_params",
+  "headers": {
+    "api-key": "[redacted]",
+    "accept": "application/json",
+    "content-type": "application/json"
+  },
+  "body": {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "temperature": 32.5,
+    "date_time": {
+      "start_date": "2024-07-15",
+      "start_time": "14:00",
+      "filter_type": 1
+    }
+  },
+  "documentedPremiumCredits": 2900,
+  "documentedBasicOrStartupCredits": 2110
+}

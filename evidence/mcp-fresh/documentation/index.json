@@ -1,0 +1,38 @@
+[
+  {
+    "route": "/docs/mcp-overview",
+    "status": 200,
+    "h1": "FortyGuard MCP",
+    "chars": 2511
+  },
+  {
+    "route": "/docs/mcp-quickstart",
+    "status": 200,
+    "h1": "MCP Quickstart",
+    "chars": 2644
+  },
+  {
+    "route": "/docs/mcp-authentication",
+    "status": 200,
+    "h1": "MCP Authentication",
+    "chars": 2261
+  },
+  {
+    "route": "/docs/mcp-tools",
+    "status": 200,
+    "h1": "Available MCP Tools",
+    "chars": 11140
+  },
+  {
+    "route": "/docs/mcp-client-setup",
+    "status": 200,
+    "h1": "MCP Client Setup",
+    "chars": 3681
+  },
+  {
+    "route": "/docs/mcp-troubleshooting",
+    "status": 200,
+    "h1": "MCP Troubleshooting",
+    "chars": 7926
+  }
+]

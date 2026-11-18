@@ -1,0 +1,34 @@
+[
+  {
+    "route": "/docs/credits-usage",
+    "status": 200,
+    "h1": "Check API Credits Usage\nGET",
+    "chars": 811,
+    "ms": 40275,
+    "file": "credits-usage.md"
+  },
+  {
+    "route": "/docs/generate-free-key",
+    "status": 200,
+    "h1": "Get a Free API Key\nPOST",
+    "chars": 1025,
+    "ms": 31881,
+    "file": "generate-free-key.md"
+  },
+  {
+    "route": "/docs/limitations",
+    "status": 200,
+    "h1": "Known Limitations",
+    "chars": 5417,
+    "ms": 31874,
+    "file": "limitations.md"
+  },
+  {
+    "route": "/docs/release-notes",
+    "status": 200,
+    "h1": "Release Notes",
+    "chars": 3551,
+    "ms": 31869,
+    "file": "release-notes.md"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-18T16:10:23.157Z",
+  "request": {
+    "method": "GET",
+    "path": "/v1/status/00000000-0000-4000-8000-000000000001",
+    "authorization": "account-key"
+  },
+  "response": {
+    "status": 404,
+    "contentType": "application/json",
+    "elapsedMs": 1234,
+    "bytes": 104,
+    "body": {
+      "error": true,
+      "status_code": 404,
+      "details": {
+        "message": "No activity found for the provided activity_id."
+      }
+    }
+  }
+}

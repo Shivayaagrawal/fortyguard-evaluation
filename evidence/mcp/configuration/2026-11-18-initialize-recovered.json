@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-18T11:29:42.723Z",
+  "endpoint": "https://tos-mcp.app.fortyguard.com/mcp",
+  "sdk": "@modelcontextprotocol/sdk 1.32.2",
+  "transport": "StreamableHTTPClientTransport",
+  "auth": "Authorization Bearer, value not recorded",
+  "toolsCalled": [],
+  "connectTimeoutMs": 35000,
+  "elapsedMs": 4797,
+  "outcome": "initialized",
+  "serverVersion": {
+    "name": "FortyGuard",
+    "version": "4.0.11"
+  },
+  "sdkError": null,
+  "exchanges": [
+    {
+      "method": "POST",
+      "url": "https://tos-mcp.app.fortyguard.com/mcp",
+      "durationMs": 2451,
+      "status": 200,
+      "statusText": "",
+      "redirected": false,
+      "responseUrl": "https://tos-mcp.app.fortyguard.com/mcp",
+      "request": {
+        "authorization": "bearer-once",
+        "contentType": "application/json",
+        "accept": "application/json, text/event-stream"
+      },
+      "headers": {
+        "cache-control": "no-cache, no-transform",
+        "content-type": "text/event-stream",
+        "date": "Wed, 18 Nov 2026 11:29:39 GMT",
+        "server": "envoy",
+        "x-accel-buffering": "no",
+        "x-envoy-upstream-service-time": "1437"
+      },
+      "body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":0,\"result\":{\"protocolVersion\":\"2025-11-25\",\"capabilities\":{\"logging\":{},\"prompts\":{\"listChanged\":true},\"resources\":{\"subscribe\":false,\"listChanged\":true},\"tools\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"FortyGuard\",\"version\":\"4.0.11\"}}}\r\n\r\n",
+      "bodyTruncated": false,
+      "classification": "jsonrpc_result"
+    },
+    {
+      "method": "POST",
+      "url": "https://tos-mcp.app.fortyguard.com/mcp",
+      "durationMs": 2267,
+      "status": 202,
+      "statusText": "",
+      "redirected": false,
+      "responseUrl": "https://tos-mcp.app.fortyguard.com/mcp",
+      "request": {
+        "authorization": "bearer-once",
+        "contentType": "application/json",
+        "accept": "application/json, text/event-stream"
+      },
+      "headers": {
+        "content-length": "0",
+        "content-type": "application/json",
+        "date": "Wed, 18 Nov 2026 11:29:40 GMT",
+        "server": "envoy",
+        "x-envoy-upstream-service-time": "1769"
+      },
+      "body": "",
+      "bodyTruncated": false,
+      "classification": "unrecognized_payload"
+    }
+  ]
+}
